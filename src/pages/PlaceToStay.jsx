@@ -17,10 +17,10 @@ const PlaceToStay = () => {
                 <p>Farm</p>
                 <button className="border rounded-lg py-3 px-6 flex items-center gap-6">Location <img src={Location} alt="" /></button>
             </section>
-            <section className="flex gap-4 justify-center items-center flex-wrap px-3 lg:px-20 lg:p-10 mb-16">
+            <section className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-4 px-8 sm:px-12 md:px-10 lg:px- xl:px-24 max-w-screen-2xl">
                 {place.map((item) => (
                     <div key={item?.sn} className="border border-[#d7d7d7] rounded-lg p-3 text-xs">
-                        <img src={item?.img} alt="" className="object-contain w-[300px] h-auto" />
+                        <img src={item?.img} alt="" className="object-contain w-[500px] h-auto" />
                         <div className="flex justify-between mt-3">
                             <p>Desert King</p>
                             <p className="font-semibold">1MBT per night</p>
