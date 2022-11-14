@@ -47,10 +47,10 @@ const Homepage = () => {
                 </section>
             </section>
             <h2 className="font-bold text-3xl px-3 md:text-5xl text-center text-black py-10">Inspiration for your next adventure</h2>
-            <section className="flex gap-4 justify-center items-center flex-wrap px-3 lg:px-20 lg:p-10 mb-16">
+            <section className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-4 px-8 sm:px-12 md:px-10 lg:px- xl:px-24 max-w-screen-2xl">
                 {home.map((item) => (
                     <div key={item?.sn} className="border border-[#d7d7d7] rounded-lg p-3 text-xs">
-                        <img src={item?.img} alt="" className="object-contain w-[300px] h-auto" />
+                        <img src={item?.img} alt="" className="object-contain w-[500px] h-auto" />
                         <div className="flex justify-between mt-3">
                             <p>Desert King</p>
                             <p className="font-semibold">1MBT per night</p>
@@ -59,13 +59,13 @@ const Homepage = () => {
                             <p>2345Km away</p>
                             <p>available for 2weeks stay</p>
                         </div>
-                        <div className="flex mt-2 gap-1.5">
+                        <div className="flex mt-2 gap-1.5 ">
                             {Array.from({ length: 5 }, (_, index) => <AiFillStar className="text-primary" key={index} />)}
                         </div>
                     </div>
                 ))}
             </section>
-            <section className="bg-primary p-5 lg:p-16">
+            <section className="bg-primary p-5 lg:p-16 mt-10">
                 <div className="flex justify-between px-5 md:pt-16">
                     <div className="text-white md:max-w-md mt-16 md:p-4">
                         <h2 className="font-bold text-5xl">Metabnb NFTs</h2>

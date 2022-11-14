@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PageWrapper from './components/wrapper/PageWrapper';
-import Homepage from './pages/Homepage';
+import Homepage from '../src/pages/HomePage';
 import PlaceToStay from './pages/PlaceToStay';
 
 function App() {
