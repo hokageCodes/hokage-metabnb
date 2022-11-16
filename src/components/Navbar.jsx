@@ -6,31 +6,16 @@ import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import { RiArrowRightSLine } from 'react-icons/ri'
 import PropTypes from 'prop-types';
 
-import Logo from '../../assets/images/logo.png';
-import Wallet1 from '../../assets/images/wallet1.png'
-import Wallet2 from '../../assets/images/wallet2.png'
-import { toggleScroll } from '../../utilities/general';
-import Button from '../layout/Button';
+import Logo from '../assets/images/logo.png';
+import Wallet1 from '../assets/images/metaPopup.png'
+import Wallet2 from '../assets/images/walletPopup.png'
+import { toggleScroll } from '../utilities/general';
+import Button from './Button';
 
-function Header() {
+function Navbar() {
     const [showModal, setShowModal] = useState(false);
     const location = useLocation();
-
-    const [scrolled, setScrolled] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
-
-    useEffect(() => {
-        const func = () => setScrolled(window.pageYOffset > 30);
-
-        if (typeof window !== 'undefined') {
-            window.addEventListener('scroll', func);
-        }
-        func();
-
-        return (() => {
-            window.removeEventListener('scroll', func);
-        });
-    }, []);
 
     useEffect(() => {
         toggleScroll();
@@ -53,7 +38,7 @@ function Header() {
                         <div className="nav-links hidden lg:block">
                             <ul className="flex items-center space-x-8">
                                 <Link to="/" className="font-semibold">Home</Link>
-                                <Link to="/place-to-stay" className="font-semibold">Place to Stay</Link>
+                                <Link to="/places" className="font-semibold">Place to Stay</Link>
                                 <Link className="font-semibold">NFTs</Link>
                                 <Link className="font-semibold">Community</Link>
                             </ul>
@@ -103,7 +88,7 @@ function Header() {
                                     </li>
                                 </Link>
                                 <Link to="/place-to-stay" onClick={() => setShowMenu(false)}>
-                                    <li className={`${location.pathname === '/place-to-stay' ? 'bg-primary bg-opacity-20' : ''} header-side-link`}>
+                                    <li className={`${location.pathname === '/places' ? 'bg-primary bg-opacity-20' : ''} header-side-link`}>
                                         Place to stay
                                     </li>
                                 </Link>
@@ -171,12 +156,12 @@ function Header() {
     );
 }
 
-Header.propTypes = {
+Navbar.propTypes = {
     solidBg: PropTypes.bool
 };
 
-Header.defaultProps = {
+Navbar.defaultProps = {
     solidBg: false
 };
 
-export default Header;
+export default Navbar;

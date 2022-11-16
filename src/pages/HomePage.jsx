@@ -1,13 +1,13 @@
 import React from 'react';
 import home from '../data/home';
-import Button from '../components/layout/Button'
+import Button from '../components/Button'
 import Hero1 from '../assets/images/hero1.png'
 import Hero2 from '../assets/images/hero2.png'
 import Hero3 from '../assets/images/hero3.png'
 import Hero4 from '../assets/images/hero4.png'
-import Sponsor1 from '../assets/images/sponsor1.png'
-import Sponsor2 from '../assets/images/sponsor2.png'
-import Sponsor3 from '../assets/images/sponsor3.png'
+import brandMB from '../assets/images/brandMB.png'
+import brandMeta from '../assets/images/brandMeta.png'
+import brandOS from '../assets/images/brandOS.png'
 import GroupImage from '../assets/images/group-image.png'
 import { AiFillStar } from 'react-icons/ai'
 
@@ -40,9 +40,9 @@ const Homepage = () => {
             <section className="mb-10 mt-16 bg-primary py-3">
                 <section className="bg-primary">
                     <div className="flex justify-between items-center max-w-7xl m-auto px-5 lg:px-10 py-2">
-                        <img src={Sponsor1} alt="MBToken" className="object-contain w-24 md:w-auto h-auto" />
-                        <img src={Sponsor2} alt="Metamask" className="object-contain w-24 md:w-auto h-auto" />
-                        <img src={Sponsor3} alt="Opensea" className="object-contain w-24 md:w-auto h-auto" />
+                        <img src={brandMB} alt="MBToken" className="object-contain w-24 md:w-auto h-auto" />
+                        <img src={brandMeta} alt="Metamask" className="object-contain w-24 md:w-auto h-auto" />
+                        <img src={brandOS} alt="Opensea" className="object-contain w-24 md:w-auto h-auto" />
                     </div>
                 </section>
             </section>

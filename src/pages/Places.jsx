@@ -3,7 +3,7 @@ import place from '../data/place'
 import { AiFillStar } from 'react-icons/ai'
 import Location from '../assets/images/location-icon.png'
 
-const PlaceToStay = () => {
+const Places = () => {
     return (
         <>
             <section className="flex flex-wrap gap-5 justify-between items-center px-7 md:px-24 py-8">
@@ -39,4 +39,4 @@ const PlaceToStay = () => {
     )
 }
 
-export default PlaceToStay
+export default Places

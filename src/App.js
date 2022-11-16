@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import PageWrapper from './components/wrapper/PageWrapper';
+import AppContent from './components/AppContent';
 import Homepage from '../src/pages/HomePage';
-import PlaceToStay from './pages/PlaceToStay';
+import Places from './pages/Places';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" exact element={<PageWrapper><Homepage /></PageWrapper>} />
-        <Route path="/place-to-stay" exact element={<PageWrapper><PlaceToStay /></PageWrapper>} />
+        <Route path="/" exact element={<AppContent><Homepage /></AppContent>} />
+        <Route path="/places" exact element={<AppContent><Places /></AppContent>} />
       </Routes>
     </BrowserRouter>
   );
